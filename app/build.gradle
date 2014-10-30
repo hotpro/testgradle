@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 20
+    buildToolsVersion "20.0.0"
+
+    defaultConfig {
+        applicationId "com.yutaohou.testgradle"
+        minSdkVersion 15
+        targetSdkVersion 20
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+//task hello {
+//    doLast {
+//        println "hello do last"
+//    }
+//}
+
+//task upper << {
+//    String someString = 'myName'
+//    println 'Original ' + someString
+//    println 'UPPER ' + someString.toUpperCase()
+//}
+//
+//task count << {
+//    4.times {println "$it "}
+//}
+//
+//task hello << {
+//    println 'Hello World'
+//}
+//
+//task intro(dependsOn: hello) << {
+//    println "I am gradle"
+//}
+//
+//task taskX(dependsOn: 'taskY') << {
+//    println 'taskX'
+//}
+//
+//task taskY << {
+//    println 'taskY'
+//}
+//
+//4.times { counter ->
+//    task "task$counter" << {
+//        println "I am gradle task $counter"
+//    }
+//}
+//
+//task0.dependsOn task1, task2
+
+//task hello << {
+//    println "hello body"
+//}
+//
+//hello.doFirst {
+//    println "hello first"
+//}
+//
+//hello.doLast {
+//    println "hello last"
+//}
+//
+//hello << {
+//    println "hello appender"
+//}
+
+//task hello << {
+//    println "hello world"
+//}
+//
+//hello.doLast {
+//    println "Greetings from $hello.name task"
+//}
+
+//task myTask {
+//    ext.myProperty = "my value"
+//}
+//
+//task printTaskProperty << {
+//    println myTask.myProperty
+//}
+
+//defaultTasks 'clean1', 'run1'
+//
+//task clean1 << {
+//    println 'default task clean'
+//}
+//
+//task run1 << {
+//    println 'default task run'
+//}
+//
+//task other << {
+//    println 'I am not a default task'
+//}
+
